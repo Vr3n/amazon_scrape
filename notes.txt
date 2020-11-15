@@ -1,0 +1,24 @@
+1.  Initialize the ChromeDriver
+2.  Send Request with ChromeDriver.
+3.  Initialize the scrapy selector.
+4.  logg necessary information
+	- log the selections made.
+5.  get the last height
+6.  define pause time
+7.  Define maximum scroll
+8.  Execute window.scrollTo(0, document.body.scrollHeight);
+9.  Get the selector again after scrolling.
+10. pause
+11. get the new height by document.body.scrollHeight
+
+
+
+#### Scrapping selectors  ####
+
+search_row = search_results.css('.s-result-item.s-asin')
+name = search_row.css('img.s-image).xpath('@alt').get()
+price = search_row.css('span.a-price-whole::text').get()
+rating = search_row.css('i.a-icon-star-small > span.a-icon-alt::text').get()
+customers_rated = search_row.css('div.a-size-small span.a-size-base::text').get()
+market_price = search_row.css('span.a-text-price.a-price > span::text).get()
+pagination = search_results.css('ul.a-pagination li.a-normal > a').xpath('@href').get()
